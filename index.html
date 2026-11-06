@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>L.J. Newton | I Knew You When</title>
+<meta name="description" content="A homepage idea for L.J. Newton, author of I Knew You When, Book One of the St-Ink Series.">
+<meta property="og:title" content="L.J. Newton | I Knew You When">
+<meta property="og:description" content="Book One of the St-Ink Series. A homepage idea made by Sparsh Saini.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/ljnewton/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-icon.png">
+<script>document.documentElement.className="js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* from the I Knew You When cover: lilac top edge, aqua middle, copper foil title and charms */
+  --lilac:#c68dd4; --lilac-pale:#efe4f3; --aqua:#a5e6e8; --aqua-pale:#e2f5f5;
+  --copper:#b06a45; --copper-ink:#5a2a18; --ink:#2f1c38; --ink-soft:#5b4566;
+  /* from the Four Hours Back cover: heel red, night plum */
+  --red:#7a1a1d; --night:#140d26; --blush:#f2d3c4;
+}
+*{box-sizing:border-box}
+html{background:var(--lilac-pale)}
+body{margin:0;background:var(--lilac-pale);color:var(--ink);font:400 1.1875rem/1.6 "Crimson Pro",Georgia,serif}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--copper-ink);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--copper-ink);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:8px;top:8px;background:var(--copper-ink);color:#fff;padding:8px 12px;z-index:5}
+.strip{background:var(--ink);color:#eadff0;font-size:.95rem;text-align:center;padding:8px 16px;margin:0}
+h1,h2,h3{font-family:"Italiana",Georgia,serif;font-weight:400;line-height:1.1;margin:0 0 .45em;color:var(--copper-ink)}
+h2{font-size:clamp(2.1rem,4.6vw,3.3rem)}
+h3{font-size:1.7rem}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+p{margin:0 0 1em}
+
+/* buttons: a copper charm, rim and all */
+.btn{display:inline-block;font-family:"Italiana",serif;font-size:1.15rem;letter-spacing:.08em;color:#fff7f1;background:#9a5434;
+  box-shadow:inset 0 0 0 2px #c98a63,inset 0 0 0 4px #9a5434,inset 0 0 0 5px #d9a07a;padding:.7em 1.3em;text-decoration:none;border-radius:3px;margin:0 .5em .6em 0}
+.btn.ghost{background:none;color:var(--copper-ink);box-shadow:inset 0 0 0 1px var(--copper-ink)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;height:380vh}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--lilac-pale)}
+.stage{position:absolute;top:7vh;right:7vw;height:86vh;aspect-ratio:1200/1799;transform-origin:0 0;will-change:transform;box-shadow:0 20px 50px rgba(60,30,70,.22)}
+.stage img{position:absolute;max-width:none}
+.plate,.cover{inset:0;width:100%;height:100%}
+.cover{opacity:0}
+.k{width:8.99%;transform-origin:50% 18.21%;will-change:transform}
+.k1{left:13.319%;top:8.293%}
+.k2{left:78.912%;top:10.404%}
+.words{position:absolute;left:7vw;top:50%;transform:translateY(-50%);max-width:min(34rem,calc(82vw - 57.4vh))}
+.js .words{opacity:0}
+.words:focus-within{opacity:1!important}
+.words h1{font-size:clamp(2.8rem,5.6vw,4.6rem);margin-bottom:.2em}
+.words .series{font-family:"Italiana",serif;font-size:1.35rem;color:#8a4527;margin:0 0 1em;letter-spacing:.03em}
+.words p{color:var(--ink-soft)}
+.wall{position:absolute;inset:0;background:var(--lilac) url(img/wall.jpg);transform-origin:var(--hx) var(--hy);will-change:transform,opacity;
+  -webkit-mask:radial-gradient(circle 52px at var(--hx) var(--hy),transparent 51.5px,#000 52.5px);
+          mask:radial-gradient(circle 52px at var(--hx) var(--hy),transparent 51.5px,#000 52.5px)}
+.rim{position:absolute;width:120px;height:120px;left:var(--hx);top:var(--hy);margin:-60px 0 0 -60px}
+.said{position:absolute;left:50%;width:min(36rem,86vw);transform:translateX(-50%);text-align:center;color:var(--copper-ink);margin:0}
+.said.a{bottom:calc(100% - var(--hy) + 84px);font-family:"Italiana",serif;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.1}
+.said.b{top:calc(var(--hy) + 84px);font-size:clamp(1.2rem,2.2vw,1.45rem)}
+@media (max-height:460px){.said.a{font-size:1.45rem;bottom:calc(100% - var(--hy) + 66px)}.said.b{font-size:1.05rem;top:calc(var(--hy) + 66px)}}
+@media (max-width:900px){
+  .stage{left:calc(50% - min(35vw,20vh));right:auto;top:3%;height:auto;width:min(70vw,40vh)}
+  .words{left:16px;right:16px;top:auto;bottom:3%;transform:none;max-width:none}
+  .words h1{font-size:2.5rem;margin:0}
+  .words .series{font-size:1.15rem;margin-bottom:.5em}
+  .words p{font-size:1.05rem;margin-bottom:.7em}
+  .words .btn{font-size:1rem;padding:.6em 1em}
+}
+@media (max-width:900px) and (max-height:700px) and (orientation:portrait){
+  .stage{width:min(60vw,31vh);left:calc(50% - min(30vw,15.5vh))}
+  .words h1{font-size:2rem}
+  .words p{margin-bottom:.45em}
+}
+@media (max-width:900px) and (orientation:landscape){
+  .stage{left:auto;right:6vw;top:6vh;height:88vh;width:auto}
+  .words{left:5vw;right:auto;top:50%;bottom:auto;transform:translateY(-50%);max-width:52vw}
+  .words h1{font-size:2rem}
+}
+
+/* calm sections */
+.wrap{max-width:70rem;margin:0 auto;padding:clamp(64px,10vw,120px) 6vw}
+.aqua{background:var(--aqua-pale)}
+.split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,6vw,96px)}
+.lede{font-size:1.35rem;color:var(--ink)}
+.shops{list-style:none;padding:0;margin:0 0 1.4em}
+.shops li{padding:.55em 0;border-bottom:1px solid #b9dcdc;display:flex;justify-content:space-between;gap:1em;flex-wrap:wrap}
+.shops li span{color:var(--ink-soft)}
+.online{color:var(--ink-soft)}
+
+.next{background:var(--red);color:var(--blush)}
+.next .wrap{display:grid;grid-template-columns:minmax(0,19rem) minmax(0,1fr);gap:clamp(28px,6vw,88px);align-items:center}
+.next h2{color:#f6dccb}
+.next img{box-shadow:0 22px 50px rgba(0,0,0,.45)}
+.next .when{font-family:"Italiana",serif;font-size:1.5rem;color:#e7a982;margin:0 0 .6em}
+.next blockquote{margin:1.6em 0 1.6em;padding:0;font-style:italic;color:#f6dccb}
+.next blockquote cite{display:block;font-style:normal;font-size:1rem;color:#d9a690;margin-top:.4em}
+.next .btn{background:#e7a982;color:var(--night);box-shadow:inset 0 0 0 2px #f3c9ab}
+.next a{color:#f6dccb}
+.next a:focus-visible,.close a:focus-visible,.next .btn:focus-visible,.close .btn:focus-visible{outline:2px solid #f6dccb;outline-offset:3px}
+
+.more .wrap{padding-top:clamp(56px,8vw,96px)}
+.shelf{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);margin-top:1.4em}
+.shelf article{display:grid;grid-template-columns:8.5rem 1fr;gap:1.2em;align-items:start}
+.shelf .kind{font-size:1rem;color:var(--ink-soft);margin:0 0 .4em;font-style:italic}
+
+.dates{list-style:none;padding:0;margin:1.6em 0 0;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(28px,5vw,72px)}
+#events .wrap>div{max-width:40rem}
+.dates li{padding:1em 0;border-bottom:1px solid #d7bfe0}
+.dates b{display:block;font-family:"Italiana",serif;font-weight:400;font-size:1.35rem;color:var(--copper-ink)}
+.dates span{display:block;color:var(--ink-soft);font-size:1.05rem}
+
+.about blockquote{margin:0 0 1.2em;font-family:"Italiana",serif;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.25;color:var(--copper-ink)}
+.close{background:var(--night);color:#e8ddf0}
+.close h2{color:#e9b893}
+.close a{color:#f0c8a8}
+.close .btn{background:#9a5434;color:#fff7f1}
+footer{padding:36px 6vw;text-align:center;font-size:.95rem;color:#b6a8c2;background:var(--night);border-top:1px solid #2c2342}
+@media (max-width:760px){
+  .split,.shelf,.next .wrap,.dates{grid-template-columns:1fr}
+  .next img{max-width:14rem}
+  .shelf article{grid-template-columns:6.5rem 1fr}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero{height:auto}
+  .pin{position:relative;height:auto;min-height:100vh;padding:40px 0}
+  .wall{display:none}
+  .stage{transform:none!important}
+  .k{transform:none!important}
+  .cover{opacity:1}
+  .words,.js .words{opacity:1!important}
+}
+@media (prefers-reduced-motion:reduce) and (max-width:900px){
+  .pin{display:flex;flex-direction:column;align-items:center;padding:24px 16px}
+  .stage{position:relative;top:auto;left:auto;right:auto;width:min(70vw,48vh);height:auto;transform:none!important}
+  .words{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;max-width:none;margin-top:22px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to the book</a>
+<p class="strip">A homepage idea made by Sparsh Saini for L.J. Newton. Not her official site.</p>
+
+<header class="hero" id="hero">
+  <div class="pin" id="pin">
+    <div class="stage" id="stage">
+      <img class="plate" src="img/plate.jpg" width="1200" height="1799" alt="" fetchpriority="high">
+      <img class="k k1" id="k1" src="img/k1.png" width="105" height="105" alt="">
+      <img class="k k2" id="k2" src="img/k2.png" width="105" height="105" alt="">
+      <img class="cover" id="cover" src="img/cover.jpg" width="1200" height="1799" alt="I Knew You When cover: copper title on lilac and aqua paper, a copper chain with three charms marked K, V and K.">
+    </div>
+    <div class="wall" id="wall" aria-hidden="true">
+      <img class="rim" src="img/rim.png" width="240" height="240" alt="">
+      <p class="said a">They grew up on the other side of a wall.</p>
+      <p class="said b">Connected by nothing more than a gap the size of a fifty pence piece.</p>
+    </div>
+    <div class="words" id="words">
+      <h1>I Knew You When</h1>
+      <p class="series">Book One of the St-Ink Series</p>
+      <p>Ten years later, the wrong story is about to be told for the last time.</p>
+      <a class="btn" href="https://www.amazon.co.uk/dp/B0HC63H3M8">Buy on Amazon</a>
+      <a class="btn ghost" href="#next">Book Two, out 18 December</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="aqua" id="book" aria-labelledby="book-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="book-h">A gap in the wall</h2>
+      <p class="lede">Killian Riley and Vanessa Callow spent their teenage years in neighbouring flats in Brentwell, talking through a hole the size of a fifty pence piece. It was enough to fall in love, and enough to make promises neither of them were old enough to keep.</p>
+      <p>Then one Boxing Day changed everything. Ten years later Killian owns St-Ink, the most sought after tattoo studio in London, and Vanessa is V.E. Callow, a bestselling children's author. When they end up in the same room for the first time in a decade, everything they buried comes back at once.</p>
+      <a class="btn" href="https://www.amazon.co.uk/dp/B0HC63H3M8">Buy on Amazon</a>
+    </div>
+    <div>
+      <h3>In paperback from</h3>
+      <ul class="shops">
+        <li><a href="https://chaptersandchai.co.uk/">Chapters &amp; Chai</a><span>Stockton-on-Tees</span></li>
+        <li><a href="https://www.thebookdragon.co.uk">The Book Dragon</a><span>Stockton-on-Tees</span></li>
+        <li>Chapter &amp; Filter<span>Darlington</span></li>
+        <li><a href="https://cwtchandchapters.com/">Cwtch &amp; Chapters</a><span>travelling bookshop</span></li>
+        <li><a href="https://for-the-love-of-romance-bookstore.myshopify.com/">For the Love of Romance</a><span>Newmarket</span></li>
+        <li><a href="https://shoplocalfalkirk.com/">Seagull Trust Bookshop</a><span>Falkirk</span></li>
+      </ul>
+      <p class="online">Or order it from <a href="https://www.waterstones.com/book/i-knew-you-when/lj-newton/9798189847998">Waterstones</a>, <a href="https://blackwells.co.uk/bookshop/product/I-Knew-You-When-by-Lj-Newton/9798189847998">Blackwell's</a>, <a href="https://www.foyles.co.uk/book/i-knew-you-when/lj-newton/9798189847998">Foyles</a> or <a href="https://www.barnesandnoble.com/w/i-knew-you-when-lj-newton/1151161085?ean=9798189847998">Barnes &amp; Noble</a>. Any Waterstones will get it in if you ask for it by name.</p>
+    </div>
+  </div>
+</section>
+
+<section class="next" id="next" aria-labelledby="next-h">
+  <div class="wrap">
+    <img src="img/fhb-cover.jpg" width="720" height="1080" alt="Four Hours Back cover: copper title on red fading to night, a beaded chain holding a red high heel." loading="lazy">
+    <div>
+      <h2 id="next-h">Four Hours Back</h2>
+      <p class="when">Book Two of the St-Ink Series. Out 18 December 2026.</p>
+      <p>Keyne Bowman's life almost ended one night, and ever since he has just existed. Cass Green is loud, funny, never seen without her heels, and very good at looking like she's fine. It was only meant to be a bit of fun: no labels, no promises, a four-hour drive and a door that stayed unlocked.</p>
+      <blockquote>“Keyne goes quiet when I need him to talk, and Cass has her own opinions about where the story is going.”<cite>L.J., in her September blog</cite></blockquote>
+      <a class="btn" href="https://www.amazon.co.uk/dp/B0HPT1Q6P7">Pre-order on Kindle</a>
+    </div>
+  </div>
+</section>
+
+<section class="more" aria-labelledby="more-h">
+  <div class="wrap">
+    <h2 id="more-h">Where it started</h2>
+    <div class="shelf">
+      <article>
+        <img src="img/its-time.jpg" width="720" height="1080" alt="It's Time cover: a purple iris on deep violet, gold title." loading="lazy">
+        <div>
+          <p class="kind">Her first novel</p>
+          <h3>It's Time</h3>
+          <p>Violet Rose is fifty-two, newly separated and rebuilding a life that belongs to her. Matty Brennan never stopped thinking about the woman he met in a pub in 1994.</p>
+          <a href="https://www.amazon.co.uk/ITS-TIME-LJ-Newton-ebook/dp/B0GX47NK7G/">Amazon</a>, <a href="https://www.waterstones.com/book/its-time/lj-newton/9798180010001">Waterstones</a>, or <a href="https://www.bookcornershop.co.uk/">The Book Corner</a> in Saltburn
+        </div>
+      </article>
+      <article>
+        <img src="img/sslh.jpg" width="720" height="1152" alt="Something Still Lives Here cover: a farm cottage at night in blue shadow." loading="lazy">
+        <div>
+          <p class="kind">A true account</p>
+          <h3>Something Still Lives Here</h3>
+          <p>Eight years in one North East farm cottage, and a family living alongside the unexplained.</p>
+          <a href="https://www.amazon.co.uk/Something-Still-Lives-Here-Account-ebook/dp/B0H1RJ7217/">Amazon</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="aqua" id="events" aria-labelledby="events-h">
+  <div class="wrap">
+    <div>
+      <h2 id="events-h">Come and find her table</h2>
+      <p>Her first big signing was Jupiter Cloud in Lincoln this September. She rearranged the table about seven times. These are the next ones.</p>
+    </div>
+    <ul class="dates" id="dates">
+      <li><b>Saturday 5 December 2026</b>Christmas Book Bonanza, The Alan Hotel, Manchester. 12pm to 4pm.<span><a href="https://www.eventbrite.com/e/christmas-book-bonanza-manchester-tickets-1990714119520">Tickets</a> or <a href="https://beventi.co/orderform/e2zqrwjgf5">pre-order signed books</a></span></li>
+      <li><b>Saturday 3 July 2027</b>Literary Escape Festival, Newcastle Racecourse. 10:30am to 3pm.<span><a href="https://www.literaryescapeco.co.uk/event-details/literary-escape-festival-newcastle-2027">Tickets</a></span></li>
+      <li><b>23 and 24 July 2027</b>Authors Invade England, Exeter.<span><a href="https://www.eventbrite.com/e/authors-invade-england-exeter-2027-tickets-1992990774055">Tickets</a> or <a href="https://beventi.co/orderform/nf2bdjqnsx">pre-order signed books</a></span></li>
+      <li><b>Saturday 9 October 2027</b>Book Bonanza, Le Monde Hotel, Edinburgh. 11am to 3pm.<span><a href="https://www.eventbrite.com/e/edinburgh-book-bonanza-2027-tickets-1996324345858">Tickets</a> or <a href="https://beventi.co/orderform/jflwds3wsw">pre-order signed books</a></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="about" aria-labelledby="about-h">
+  <div class="wrap split">
+    <blockquote>“I’m not an intellectual. I don’t have a degree in creative writing or a shelf full of literary accolades. What I am is someone who writes with everything I have.”</blockquote>
+    <div>
+      <h2 id="about-h">About L.J.</h2>
+      <p>L.J. Newton writes contemporary romance and paranormal memoir from the North East of England: love, loss, fresh starts and the bravery it takes to begin again, with a dark sense of humour.</p>
+      <p>She keeps her stories tied to real things. Violet's chickens are real, and so is her bread. “If it feels real to me it will feel real to the reader. That is the theory anyway.”</p>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="close-h">The St-Ink Inner Circle</h2>
+      <p>Her reader group gets advance copies and early news, and helps share Matty, Violet and the rest of her characters with the world.</p>
+      <a class="btn" href="https://www.facebook.com/groups/963531943494994/">Join the Inner Circle</a>
+    </div>
+    <div>
+      <h3 style="color:#e9b893">Letters from L.J.</h3>
+      <p>News, cover reveals and release dates, plus the occasional dog update. <a href="https://ljnewton.com/#newsletter">Sign up on her site</a>.</p>
+      <p>On Instagram as <a href="https://www.instagram.com/ljnewtonauthor">@ljnewtonauthor</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>A mockup made by Sparsh Saini for L.J. Newton. Not affiliated, not live.</footer>
+
+<script>
+(function(){
+  var pin=document.getElementById('pin');
+  function hole(){ pin.style.setProperty('--hx',Math.round(pin.clientWidth/2)+'px'); pin.style.setProperty('--hy',Math.round(pin.clientHeight*(innerWidth<=900?.47:.46))+'px'); }
+  hole();
+  var rm=matchMedia('(prefers-reduced-motion: reduce)');
+  if (rm.addEventListener) rm.addEventListener('change',function(){ location.reload(); });
+  if (rm.matches) return;
+  var hero=document.getElementById('hero'), st=document.getElementById('stage'), wall=document.getElementById('wall'),
+      k1=document.getElementById('k1'), k2=document.getElementById('k2'),
+      cv=document.getElementById('cover'), w=document.getElementById('words'), said=wall.querySelectorAll('.said');
+  var VX=.4997, VY=.0672;   /* the V charm, as a share of the cover */
+  var top, span, hx, hy, sw, sh, sl, stp, s0, ticking=false;
+  function measure(){
+    hole(); st.style.transform='none';
+    top=hero.offsetTop; span=hero.offsetHeight-pin.clientHeight;
+    hx=pin.clientWidth/2; hy=pin.clientHeight*(innerWidth<=900?.47:.46);
+    var r=st.getBoundingClientRect(), q=pin.getBoundingClientRect(); sw=r.width; sh=r.height; sl=r.left-q.left; stp=r.top-q.top;
+    s0=40/(sw*.04);       /* the V charm fills most of the 52px gap */
+    update();
+  }
+  function c(x){return x<0?0:x>1?1:x}
+  function io(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2}
+  function swing(el,p,a,dir){
+    var t=c((p-a)/.36), ang=dir*15*Math.pow(1-t,2)*Math.sin(t*Math.PI*3.5+ .9);
+    el.style.transform='rotate('+ang.toFixed(2)+'deg)';
+  }
+  function update(){
+    ticking=false;
+    var p=c((scrollY-top)/span);
+    /* the wall: the words go first, then the gap opens past you */
+    var tw=c((p-.03)/.12); for(var i=0;i<said.length;i++) said[i].style.opacity=(1-tw).toFixed(3);
+    var g=c((p-.06)/.3), ws=Math.exp(Math.log(46)*g*g);
+    wall.style.transform='scale('+ws.toFixed(3)+')';
+    var wo=1-c((p-.27)/.08); wall.style.opacity=wo.toFixed(3); wall.style.visibility=wo>0?'visible':'hidden';
+    /* the camera: from the V charm in the gap back to the whole cover */
+    var k=io(c((p-.08)/.6)), s=s0+(1-s0)*k;
+    var fx=sl+VX*sw, fy=stp+VY*sh;
+    var px=hx+(fx-hx)*k, py=hy+(fy-hy)*k;
+    var tx=px-sl-s*VX*sw, ty=py-stp-s*VY*sh;
+    st.style.transform='translate('+tx.toFixed(1)+'px,'+ty.toFixed(1)+'px) scale('+s.toFixed(4)+')';
+    /* Killian's and Kyle's charms are still swinging when they come into view */
+    swing(k1,p,.36,1); swing(k2,p,.42,-1);
+    cv.style.opacity=c((p-.8)/.06).toFixed(3);
+    var t=c((p-.84)/.1); w.style.opacity=t.toFixed(3);
+  }
+  addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(update);} },{passive:true});
+  addEventListener('resize',measure);
+  measure();
+})();
+</script>
+</body>
+</html>
